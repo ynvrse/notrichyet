@@ -1,0 +1,1 @@
+import{c as o,j as s}from"./theme-provider-Cr7NOLPU.js";const n="/notrichyet/assets/404-TCzqS-Pn.gif";function l(){const t=o.c(1);let e;return t[0]===Symbol.for("react.memo_cache_sentinel")?(e=s.jsx("div",{className:"w-full h-full flex flex-col items-center justify-center",children:s.jsx("img",{src:n,alt:"Not Found",className:"w-1/2"})}),t[0]=e):e=t[0],e}export{l as default};
