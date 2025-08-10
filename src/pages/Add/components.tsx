@@ -13,6 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
 
 import { Progress } from '@/components/ui/progress';
+import { db } from '@/hooks/useInstantDb';
 import { format } from 'date-fns';
 import { id as IND } from 'date-fns/locale';
 import {
@@ -31,7 +32,10 @@ import { expenseIcons } from './constants';
 import { SavingMode } from './types';
 import { useAddForm } from './useAddForm';
 
-export function AddForm({ userId }: { userId: string }) {
+export function AddForm() {
+    const { user } = db.useAuth();
+    const userId = user?.id;
+
     const {
         activeTab,
         setActiveTab,

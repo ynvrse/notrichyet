@@ -15,11 +15,7 @@ export default defineConfig(({ command }) => {
     return {
         base: isProd ? basenameProd : '',
         plugins: [
-            react({
-                babel: {
-                    plugins: [['babel-plugin-react-compiler', { debug: true }]],
-                },
-            }),
+            react(),
             tailwindcss(),
             VitePWA({
                 registerType: 'autoUpdate',
