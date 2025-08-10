@@ -67,6 +67,7 @@
         "@types/react-dom": "npm:types-react-dom@rc",
         "@vitejs/plugin-react": "^4.3.4",
         "autoprefixer": "^10.4.21",
+        "babel-plugin-react-compiler": "19.1.0-rc.2",
         "eslint": "^9.21.0",
         "eslint-plugin-react-hooks": "^5.0.0",
         "eslint-plugin-react-refresh": "^0.4.19",
@@ -85,6 +86,10 @@
         "vite": "^6.2.0",
         "vite-plugin-pwa": "^0.21.1",
         "vitest": "^3.0.7"
+    },
+    "overrides": {
+        "@types/react": "npm:types-react@rc",
+        "@types/react-dom": "npm:types-react-dom@rc"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

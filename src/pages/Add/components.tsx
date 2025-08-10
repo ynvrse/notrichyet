@@ -34,7 +34,7 @@ import { useAddForm } from './useAddForm';
 
 export function AddForm() {
     const { user } = db.useAuth();
-    const userId = user?.id;
+    const userId = user?.id ?? '';
 
     const {
         activeTab,
