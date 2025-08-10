@@ -38,7 +38,6 @@ import { useNavigate } from 'react-router';
 import { splitMethods } from '../HangoutDetail/constants';
 import { HangoutSettingsModal } from '../HangoutDetail/hangout-setting-modal';
 import { splitMethodLabels } from './constants';
-import { SplitMethod } from './types';
 import { useHangout } from './useHangout';
 
 export function HangoutForm() {
@@ -56,17 +55,17 @@ export function HangoutForm() {
         isSubmitting,
         isLoading,
         allProfiles,
-        activeHangouts,
+        // activeHangouts,
         settledHangouts,
-        allHangouts,
+        // allHangouts,
         joinedHangouts,
-        joinedHangoutParticipants,
+        // joinedHangoutParticipants,
         ownedHangouts,
         handleCreateHangout,
         handleJoinHangout,
         copyJoinCode,
         calculateHangoutTotal,
-        getParticipantOwes,
+        // getParticipantOwes,
         formatCurrency,
     } = useHangout();
 
@@ -372,7 +371,11 @@ export function HangoutForm() {
                                                 <div className="absolute top-0 right-6 flex items-center gap-2">
                                                     <CrownIcon className="h-4 w-4 text-yellow-500" />
                                                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100">
-                                                        {splitMethodLabels[hangout.splitMethod as SplitMethod]}
+                                                        {
+                                                            splitMethodLabels[
+                                                                hangout.splitMethod as 'equal' | 'manual' | 'treat'
+                                                            ]
+                                                        }
                                                     </Badge>
                                                 </div>
                                                 <div className="space-y-4">

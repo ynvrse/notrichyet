@@ -18,6 +18,7 @@ const schema = i.schema({
             profilePicture: i.string().optional(),
             email: i.string().optional(),
             createdAt: i.date().optional(),
+            updatedAt: i.date().optional(),
         }),
 
         // Simple categories for organization
@@ -113,6 +114,7 @@ const schema = i.schema({
 
             // Split info
             splitAmong: i.json(), // array of participant IDs
+            receiptUrl: i.string().optional(),
 
             createdAt: i.date().indexed(),
         }),

@@ -19,7 +19,7 @@ export default function Sidebar() {
                         <Avatar className="h-12 w-12">
                             <AvatarImage src={avatar} alt={profile?.fullName || user?.email || 'User'} />
                             <AvatarFallback className="text-lg">
-                                {profile?.firstName?.charAt(0) || user?.email?.charAt(0) || <User size={24} />}
+                                {profile?.fullName?.charAt(0) || user?.email?.charAt(0) || <User size={24} />}
                             </AvatarFallback>
                         </Avatar>
                         <div>

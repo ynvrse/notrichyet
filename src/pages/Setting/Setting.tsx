@@ -28,8 +28,8 @@ export default function Setting() {
     useEffect(() => {
         if (profile) {
             setEditForm({
-                firstName: profile.firstName || '',
-                lastName: profile.lastName || '',
+                firstName: '',
+                lastName: '',
                 fullName: profile.fullName || '',
             });
         }
@@ -147,12 +147,6 @@ export default function Setting() {
         try {
             const updates: any = {};
 
-            if (editForm.firstName !== profile?.firstName) {
-                updates.firstName = editForm.firstName;
-            }
-            if (editForm.lastName !== profile?.lastName) {
-                updates.lastName = editForm.lastName;
-            }
             if (editForm.fullName !== profile?.fullName) {
                 updates.fullName = editForm.fullName;
             }
@@ -170,8 +164,8 @@ export default function Setting() {
 
     const handleCancelEdit = () => {
         setEditForm({
-            firstName: profile?.firstName || '',
-            lastName: profile?.lastName || '',
+            firstName: '',
+            lastName: '',
             fullName: profile?.fullName || '',
         });
         setIsEditing(false);
@@ -191,7 +185,7 @@ export default function Setting() {
                             <Avatar className="mx-auto h-24 w-24">
                                 <AvatarImage src={avatar} alt={profile?.fullName || user?.email || 'User'} />
                                 <AvatarFallback className="text-lg">
-                                    {profile?.firstName?.charAt(0) || user?.email?.charAt(0) || <User size={24} />}
+                                    {profile?.fullName?.charAt(0) || user?.email?.charAt(0) || <User size={24} />}
                                 </AvatarFallback>
                             </Avatar>
 

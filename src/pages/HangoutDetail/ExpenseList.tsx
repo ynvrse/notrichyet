@@ -16,7 +16,6 @@ import {
     CalendarIcon,
     CheckIcon,
     EditIcon,
-    ImageIcon,
     PlusCircle,
     ReceiptIcon,
     Trash2Icon,
@@ -89,7 +88,7 @@ export function ExpenseList({ hangout, allProfiles, currentUserId }: any) {
                         paidById: currentUserId,
                         description: formData.description,
                         amount: Number(formData.amount),
-                        category: formData.category || undefined,
+                        category: formData.category,
                         receiptUrl: formData.receiptUrl || undefined,
                         date: selectedDate,
                         createdAt: new Date(),
@@ -247,12 +246,12 @@ export function ExpenseList({ hangout, allProfiles, currentUserId }: any) {
                                                     <p className="text-lg font-bold text-red-600">
                                                         {formatCurrency(expense.amount || 0)}
                                                     </p>
-                                                    {expense.receiptUrl && (
+                                                    {/* {expense.receiptUrl && (
                                                         <Badge variant="outline" className="mt-1 text-xs">
                                                             <ImageIcon className="mr-1 h-3 w-3" />
                                                             Receipt
                                                         </Badge>
-                                                    )}
+                                                    )} */}
                                                 </div>
                                             </div>
 
@@ -405,7 +404,7 @@ export function ExpenseList({ hangout, allProfiles, currentUserId }: any) {
                         </div>
 
                         {/* Receipt URL */}
-                        <div>
+                        {/* <div>
                             <Label htmlFor="receiptUrl">Receipt Photo URL (Optional)</Label>
                             <Input
                                 id="receiptUrl"
@@ -414,7 +413,7 @@ export function ExpenseList({ hangout, allProfiles, currentUserId }: any) {
                                 onChange={(e) => setFormData({ ...formData, receiptUrl: e.target.value })}
                                 className="mt-2"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Preview */}
                         {formData.amount && formData.description && (

@@ -28,9 +28,9 @@ export default defineConfig(({ command }) => {
                 },
                 includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
                 manifest: {
-                    name: 'Yonstack React PWA',
-                    short_name: 'yonstack-pwa',
-                    description: 'Starter kit for modern web applications',
+                    name: 'Not Rich Yet',
+                    short_name: 'NRY',
+                    description: 'Join this hangout',
                     theme_color: '#ffffff',
                     display: 'fullscreen',
                     start_url: isProd ? `${basenameProd}` : '/',

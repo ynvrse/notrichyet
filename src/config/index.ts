@@ -1,8 +1,8 @@
-const title = 'YONSTACK - PWA';
+const title = 'Not Rich Yet';
 
 const version = '1.0.0';
 
-const repoName = 'yonstack-pwa';
+const repoName = 'notrichyet';
 
 const author = 'Dion Firmansyah';
 
